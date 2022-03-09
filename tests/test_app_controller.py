@@ -46,3 +46,15 @@ async def test_update_ml_app(client):
         )
     assert response.status == 200, 'Response body is : ' + (await response.read()).decode('utf-8')
 
+    
+async def test_list_ml_app(client):
+    headers = { 
+        'Accept': 'application/json',
+    }
+    response = await client.request(
+        method='GET',
+        path='/api/v1/mlapp',
+        headers=headers,
+        )
+    assert response.status == 200, 'Response body is : ' + (await response.read()).decode('utf-8')
+

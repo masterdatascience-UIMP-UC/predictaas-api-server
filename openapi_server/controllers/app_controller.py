@@ -38,3 +38,8 @@ async def update_ml_app(request: web.Request, appname, body) -> web.Response:
     """
     body = MLApp.from_dict(body)
     return web.Response(status=200)
+
+async def get_ml_apps(request: web.Request) -> web.Response:
+    return web.Response(status=200)
+
+
