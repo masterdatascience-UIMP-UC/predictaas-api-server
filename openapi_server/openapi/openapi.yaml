@@ -27,6 +27,29 @@ tags:
 - description: Operations about app
   name: App
 paths:
+  /mlapp:
+    get:
+      description: |
+        Some description of the operation.
+        You can use `markdown` here.
+      operationId: get_ml_apps
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                appname: fooapp
+              schema:
+                $ref: '#/components/schemas/MLApp'
+          description: Success
+        "403":
+          description: Forbidden
+        "404":
+          description: Application not found
+      summary: Get ML applications
+      tags:
+      - App
+      x-openapi-router-controller: openapi_server.controllers.app_controller
   /mlapp/{appname}:
     get:
       description: |
