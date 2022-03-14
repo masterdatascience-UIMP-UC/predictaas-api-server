@@ -12,3 +12,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: mkdocs.yml
           REQUIREMENTS: docs/requirements.txt
+      - name: Flake8 action
+        uses: suo/flake8-github-action@v1
