@@ -27,4 +27,4 @@ jobs:
         uses: paolorechia/fast-pytest-github-action@develop
         with:
           pytest_args: 'sample_py/test_success.py'
-          requirements_file: 'test_requirements.txt'
+          requirements_file: 'test-requirements.txt'
