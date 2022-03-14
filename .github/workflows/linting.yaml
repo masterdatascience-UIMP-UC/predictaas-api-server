@@ -1,1 +1,8 @@
-
+name: Flake8 check
+on: [push]
+jobs:
+  Flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Flake8 action
+        uses: suo/flake8-github-action@v1
