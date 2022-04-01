@@ -1,6 +1,11 @@
-name: pydocstyle check
+name: Linting
 on: [push]
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Action for Flake8
+        uses: cclauss/GitHub-Action-for-Flake8@v0.5.0
   Run-pydocstyle:
     runs-on: ubuntu-latest
     steps:
@@ -30,8 +35,6 @@ jobs:
           extra-pydocstyle-options: ""
           extra-mypy-options: ""
           extra-pylint-options: ""
-  
-
           extra-flake8-options: ""
           extra-mccabe-options: ""
           extra-radon-options: ""
