@@ -1,4 +1,4 @@
-name: Flake8
+name: Linting
 on: [push]
 jobs:
   lint:
@@ -6,4 +6,38 @@ jobs:
     steps:
       - name: GitHub Action for Flake8
         uses: cclauss/GitHub-Action-for-Flake8@v0.5.0
-
+  Run-pydocstyle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: weibullguy/python-lint-plus@master
+        with:
+          python-root-list: "python_alelo tests"
+          use-black: false
+          use-yapf: false
+          use-isort: false
+          use-docformatter: false
+          use-pycodestyle: false
+          use-pydocstyle: true
+          use-mypy: false
+          use-pylint: false
+          use-flake8: false
+          use-mccabe: false
+          use-radon: false
+          use-rstcheck: false
+          use-check-manifest: false
+          use-pyroma: false
+          extra-black-options: ""
+          extra-yapf-options: ""
+          extra-isort-options: ""
+          extra-docformatter-options: ""
+          extra-pycodestyle-options: ""
+          extra-pydocstyle-options: ""
+          extra-mypy-options: ""
+          extra-pylint-options: ""
+          extra-flake8-options: ""
+          extra-mccabe-options: ""
+          extra-radon-options: ""
+          extra-rstcheck-options: ""
+          extra-manifest-options: ""
+          extra-pyroma-options: ""
