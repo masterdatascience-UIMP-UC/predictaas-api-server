@@ -1,12 +1,6 @@
 
 name: Bandit
-on:
-  push:
-    paths:
-      - 
-    branches: 
-      - main
-        
+on: [push]     
 jobs:
   analyze:
     runs-on: ubuntu-latest
