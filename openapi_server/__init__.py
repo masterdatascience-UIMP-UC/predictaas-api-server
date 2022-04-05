@@ -10,6 +10,6 @@ def main():
     app.add_api('openapi.yaml',
                 arguments={'title': 'PredictaaS'},
                 pythonic_params=True,
-                pass_context_arg_name='request')
+                word_context_arg_name='request')
 
     app.run(port=8080)
