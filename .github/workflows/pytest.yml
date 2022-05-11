@@ -32,7 +32,6 @@ jobs:
           #python -m pip install --python-version 3.8 -
           pipenv install -r requirements.txt
           pipenv install -r test-requirements.txt
-          #pip install -e
           pipenv install --deploy --dev
       - name: Run test suite
         run: |
