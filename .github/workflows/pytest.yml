@@ -30,6 +30,8 @@ jobs:
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
         run: |
           pipenv install --deploy --dev
+          pipenv install -r requirements.txt
+          pipenv install -r test-requirements.txt
       - name: Run test suite
         run: |
           pipenv run test -v
