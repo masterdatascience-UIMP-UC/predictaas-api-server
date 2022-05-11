@@ -32,7 +32,7 @@ jobs:
           #python -m pip install --python-version 3.8 -
           pip install -r requirements.txt
           pip install -r test-requirements.txt
-          pip3 install -e
+          pip install -e
           #pipenv install --deploy --dev
       - name: Run test suite
         run: |
