@@ -34,7 +34,7 @@ jobs:
           pipenv install --deploy --dev
       - name: Run test suite
         run: |
-          pipenv -m pytest --import-mode=append tests/
+          pipenv pytest --import-mode=append tests/
           pipenv run test -v
 
 #- name: GitHub Action for pytest
