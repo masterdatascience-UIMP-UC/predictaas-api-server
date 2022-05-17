@@ -14,9 +14,9 @@ VERSION = "1.0.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
-    "connexion==2.6.0",
+    "connexion>=2.6.0",
     "swagger-ui-bundle==0.0.6",
-    "aiohttp_jinja2==1.2.0",
+    "aiohttp_jinja2==1.5.0",
 ]
 
 setup(
@@ -33,7 +33,7 @@ setup(
     entry_points={
         'console_scripts': ['openapi_server=openapi_server.__main__:main']},
     long_description="""\
-    This is a **sample** API for the PredictaaS web service. # Introduction This API specification is intended to provide a skeleton for the required API paths expected for the PredictaaS ML web service. It is OpenAPI v3 compliant, check out [OpenAPI format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md) for additional features. 
+    This is a **sample** API for the PredictaaS web service. # Introduction This API specification is intended to provide a skeleton for the required API paths expected for the PredictaaS ML web service. It is OpenAPI v3 compliant, check out [OpenAPI format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md) for additional features.
     """
 )
 
