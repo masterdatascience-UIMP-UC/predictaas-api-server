@@ -16,5 +16,5 @@ authors:
 title: "PredictaaS"
 version: 1.0.0
 doi: 
-date-released: 2022
+date-released: "2022"
 url: "https://github.com/masterdatascience-UIMP-UC/predictaas-api-server"
